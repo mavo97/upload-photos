@@ -1,10 +1,19 @@
-<div class="card-columns">
-
-    <div class="card" *ngFor="let item of items | async">
-        <img [src]="item.url" class="card-img-top " alt="... ">
-        <div class="card-body ">
-            <h5 class="card-title ">{{ item.nombre }}</h5>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 text-center">Album de Fotos</h1>
+            <p class="lead text-center">De Miguel para Lucero <a class="btn btn-danger text-white"><i class="fas fa-heart"></i></a></p>
         </div>
+    </div>
+    <div class="card-columns">
+
+        <div class="card" *ngFor="let item of items | async">
+            <img [src]="item.url" class="card-img-top " alt="... ">
+            <div class="card-body ">
+                <h5 class="card-title ">{{ item.nombre }}</h5>
+            </div>
+        </div>
+
     </div>
 
 </div>
